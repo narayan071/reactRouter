@@ -18,15 +18,20 @@ export default function Footer() {
                         <div>
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
                             <ul className="text-gray-500 font-medium">
-                                <li className="mb-4">
-                                    <Link to="/" className="hover:underline">
+                                <li className="mb-2">
+                                    <NavLink to="/" className={({isActive})=>`${isActive ? "text-orange-700" : "text-gray-700"} hover:underline hover:text-yellow-400 duration-500`}>
                                         Home
-                                    </Link>
+                                    </NavLink>
                                 </li>
-                                <li>
-                                    <Link to="/about" className="hover:underline">
+                                <li className='mb-2'>
+                                    <NavLink to="/about" className={({isActive})=>`${isActive ? "text-orange-700" : "text-gray-700" } hover:underline hover:text-yellow-400 duration-500`}>
                                         About
-                                    </Link>
+                                    </NavLink>
+                                </li>
+                                <li className='mb-2'>
+                                    <NavLink to="/contact" className={({isActive})=>`${isActive ? "text-orange-700" : "text-gray-700" } hover:underline hover:text-yellow-400 duration-500`}>
+                                        Contact
+                                    </NavLink>
                                 </li>
                             </ul>
                         </div>
@@ -34,14 +39,11 @@ export default function Footer() {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Follow us</h2>
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
-                                    <a
-                                        href="https://github.com/hiteshchoudhary"
-                                        className="hover:underline"
-                                        target="_blank"
-                                        rel="noreferrer"
+                                    <NavLink to="/github"
+                                        className={({isActive})=>`${isActive ? "text-orange-700": "text-gray-700"} hover:underline hover:text-yellow-400 duration-500`}
                                     >
                                         Github
-                                    </a>
+                                    </NavLink>
                                 </li>
                                 <li>
                                     <Link to="/" className="hover:underline">
